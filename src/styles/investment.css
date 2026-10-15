@@ -1,0 +1,86 @@
+/* Person 2 module styles. All classes are prefixed "pp2-" so they cannot clash with
+   Person 1 or Person 3. Colours fall back to calm defaults but use Person 3's
+   design tokens if they define --color-primary, --color-text, --color-surface etc. */
+
+.pp2 {
+  --pp2-primary: var(--color-primary, #1f6f5c);
+  --pp2-text: var(--color-text, #1d2a26);
+  --pp2-muted: var(--color-muted, #5d6d67);
+  --pp2-surface: var(--color-surface, #ffffff);
+  --pp2-bg: var(--color-bg, #f4f7f5);
+  --pp2-line: var(--color-border, #d9e2de);
+  --pp2-warn: #a6471f;
+  --pp2-good: #1f6f5c;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--pp2-text);
+}
+.pp2 h1 { font-size: 1.75rem; margin: 0 0 .25rem; }
+.pp2 h2 { font-size: 1.2rem; margin: 2rem 0 .75rem; }
+.pp2 .pp2-lede { color: var(--pp2-muted); max-width: 60ch; margin: 0 0 1.5rem; line-height: 1.5; }
+
+.pp2-panel {
+  background: var(--pp2-surface);
+  border: 1px solid var(--pp2-line);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.pp2-controls { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.pp2-field label { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: .4rem; }
+.pp2-field input[type="range"] { width: 100%; accent-color: var(--pp2-primary); }
+.pp2-field select { width: 100%; padding: .5rem; border: 1px solid var(--pp2-line); border-radius: 8px; font: inherit; background: var(--pp2-surface); color: inherit; }
+.pp2-hint { color: var(--pp2-muted); font-size: .875rem; margin: .35rem 0 0; }
+
+.pp2-why { border-left: 4px solid var(--pp2-primary); padding: .25rem 0 .25rem 1rem; margin: 1.5rem 0 0; line-height: 1.5; }
+
+.pp2-cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.pp2-card { display: flex; flex-direction: column; gap: .75rem; }
+.pp2-card h3 { margin: 0; font-size: 1.1rem; }
+.pp2-card p { margin: 0; line-height: 1.45; }
+.pp2-meter { display: flex; gap: 4px; align-items: center; font-size: .875rem; color: var(--pp2-muted); }
+.pp2-meter span.dot { width: 14px; height: 6px; border-radius: 3px; background: var(--pp2-line); }
+.pp2-meter span.dot.on { background: var(--pp2-primary); }
+.pp2-facts { display: grid; grid-template-columns: auto 1fr; gap: .25rem .75rem; font-size: .9rem; margin: 0; }
+.pp2-facts dt { color: var(--pp2-muted); }
+.pp2-facts dd { margin: 0; }
+.pp2-projection { background: var(--pp2-bg); border-radius: 8px; padding: .75rem; }
+.pp2-projection strong { font-size: 1.3rem; display: block; }
+.pp2-projection small { color: var(--pp2-muted); }
+.pp2-caution { font-size: .875rem; color: var(--pp2-warn); }
+.pp2-status { font-weight: 600; font-size: .9rem; }
+.pp2-status.ok { color: var(--pp2-good); }
+.pp2-status.short { color: var(--pp2-warn); }
+
+.pp2-choices { display: grid; gap: .5rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.pp2-choice {
+  text-align: left; padding: .75rem 1rem; border: 1px solid var(--pp2-line); border-radius: 10px;
+  background: var(--pp2-surface); color: inherit; font: inherit; cursor: pointer;
+}
+.pp2-choice[aria-pressed="true"] { border-color: var(--pp2-primary); box-shadow: inset 0 0 0 1px var(--pp2-primary); font-weight: 600; }
+.pp2 :focus-visible { outline: 3px solid var(--pp2-primary); outline-offset: 2px; }
+
+.pp2-bars { display: grid; gap: 1rem; margin-top: 1rem; }
+.pp2-bar-row .label { display: flex; justify-content: space-between; gap: 1rem; font-size: .95rem; margin-bottom: .3rem; flex-wrap: wrap; }
+.pp2-track { position: relative; height: 14px; background: var(--pp2-bg); border-radius: 7px; }
+.pp2-fill { height: 100%; border-radius: 7px; background: var(--pp2-primary); transition: width .25s; }
+.pp2-fill.below { background: var(--pp2-warn); }
+.pp2-marker { position: absolute; top: -4px; bottom: -4px; width: 2px; background: var(--pp2-text); }
+.pp2-legend { font-size: .85rem; color: var(--pp2-muted); margin-top: .5rem; }
+
+.pp2-split { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 1rem; }
+.pp2-split h4 { margin: 0 0 .4rem; }
+.pp2-split ul { margin: 0; padding-left: 1.1rem; line-height: 1.5; }
+
+.pp2-toggle { display: flex; gap: .6rem; align-items: flex-start; margin-top: 1rem; }
+.pp2-disclaimer { margin-top: 2rem; font-size: .85rem; color: var(--pp2-muted); border-top: 1px solid var(--pp2-line); padding-top: 1rem; }
+
+@media (prefers-reduced-motion: reduce) { .pp2-fill { transition: none; } }
+
+/* ---- data status, source notes, inputs ---- */
+.pp2-banner { margin: 0 0 1rem; padding: .6rem .9rem; border-radius: 8px; font-size: .9rem; background: var(--pp2-bg); border: 1px solid var(--pp2-line); }
+.pp2-banner.live { border-color: var(--pp2-primary); }
+.pp2-banner.partial, .pp2-banner.offline, .pp2-banner.empty { border-color: var(--pp2-warn); color: var(--pp2-warn); }
+.pp2-source { font-size: .8rem; color: var(--pp2-muted); margin-top: auto !important; }
+.pp2-input { flex: 1 1 200px; padding: .5rem; border: 1px solid var(--pp2-line); border-radius: 8px; font: inherit; background: var(--pp2-surface); color: inherit; }
+.pp2-projection small { display: block; }
