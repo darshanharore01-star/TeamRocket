@@ -196,6 +196,7 @@ export default function Simulator({ profile = defaultProfile }) {
       </p>
     </section>
   );
+}
 
 // OWNER: Person 2 - replace this placeholder with the market-crash simulator.
 export default function Simulator() {
