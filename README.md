@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # PaisaPilot
 
 Minimalist, student-first financial planning prototype (React + Vite, simulated data, no backend).
@@ -39,3 +40,6 @@ npm run preview
 - Add new math to `utils/calculations.js` as pure functions.
 
 All figures are simulated. This is an educational prototype, not investment advice.
+=======
+# TeamRocket
+>>>>>>> origin/main
