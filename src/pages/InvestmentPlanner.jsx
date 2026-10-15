@@ -1,4 +1,3 @@
- feature/investments
 // Person 2: Investment Planner page (route: /investments)
 import { useMemo, useState } from 'react';
 import '../styles/investment.css';
