@@ -1,4 +1,4 @@
-feature/investments
+
 // Person 2: Market-crash simulator (route: /simulator)
 // Replays a hypothetical fall, or a real one (COVID-19 2020, 2008) using real index-fund prices.
 import { useEffect, useState } from 'react';
