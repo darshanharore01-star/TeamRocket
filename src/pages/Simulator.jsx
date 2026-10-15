@@ -1,3 +1,4 @@
+feature/investments
 // Person 2: Market-crash simulator (route: /simulator)
 // Replays a hypothetical fall, or a real one (COVID-19 2020, 2008) using real index-fund prices.
 import { useEffect, useState } from 'react';
@@ -195,4 +196,15 @@ export default function Simulator({ profile = defaultProfile }) {
       </p>
     </section>
   );
+
+// OWNER: Person 2 - replace this placeholder with the market-crash simulator.
+export default function Simulator() {
+  return (
+    <section>
+      <h1 className="page-title">When markets fall</h1>
+      <p className="page-sub">The interactive market-decline simulator will live here.</p>
+      <div className="card placeholder">Placeholder - Person 2 builds this module.</div>
+    </section>
+  )
+  main
 }
