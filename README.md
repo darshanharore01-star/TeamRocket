@@ -1,1 +1,1 @@
-# TeamRocket - The Honest Million
+# TeamRocket
