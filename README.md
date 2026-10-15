@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # PaisaPilot
 
 Minimalist, student-first financial planning prototype (React + Vite, simulated data, no backend).
@@ -42,4 +42,4 @@ npm run preview
 All figures are simulated. This is an educational prototype, not investment advice.
 =======
 # TeamRocket
->>>>>>> origin/main
+
