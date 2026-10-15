@@ -144,7 +144,7 @@ export default function InvestmentPlanner({ profile = defaultProfile }) {
       </p>
     </section>
   );
-
+}
 // OWNER: Person 2 - replace this placeholder with the investment comparison module.
 export default function InvestmentPlanner() {
   return (
