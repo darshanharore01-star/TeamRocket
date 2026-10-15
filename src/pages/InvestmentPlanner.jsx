@@ -146,4 +146,4 @@ export default function InvestmentPlanner({ profile = defaultProfile }) {
   );
 }
 
-}
+
