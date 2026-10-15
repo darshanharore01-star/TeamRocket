@@ -196,4 +196,4 @@ export default function Simulator({ profile = defaultProfile }) {
       </p>
     </section>
   );
-
+}
